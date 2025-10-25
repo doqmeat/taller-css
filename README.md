@@ -1,6 +1,6 @@
 ### instrucciones
 1. [index.html template](https://raw.githubusercontent.com/doqmeat/taller-css/refs/heads/main/index.html?token=GHSAT0AAAAAADKO7UTFPYCZRKKGB5UT6BJO2H4EEDQ) (por si faltaste al taller anterior!)
-2. bajar assets y fonts del [repositorio de github](https://github.com/doqmeat/taller-css
+2. bajar assets y fonts del [repositorio de github](https://github.com/doqmeat/taller-css)
 3. editor con un live preview! aquí algunas opciones:
 	1. VSC extension: *live preview*
 	2. [Phoenix Code - online code editor with live preview](https://phcode.dev/)
