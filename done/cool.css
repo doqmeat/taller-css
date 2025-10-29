@@ -1,0 +1,167 @@
+@font-face {
+	font-family: romance;
+	src: url(../fonts/RomanceA.ttf);
+}
+
+@font-face {
+	font-family: blotter;
+	src: url(../fonts/blotter.otf);
+}
+
+* {
+	box-sizing: border-box;
+}
+
+:root {
+	--fonts: ms pgothic, monospace, arial;
+	--dark: #481c31;
+	--light: #f9e8cf;
+	--peach: #d1a99a;
+	--red: #8e2335;
+	--green: #4d4828;
+}
+
+body {
+	color: var(--red);
+	margin: 0;
+	font-size: 20px;
+	font-family: var(--fonts);
+	background-color: #6d5d5a;
+	background-image: url(../assets/bg.png), url(../assets/pattern.gif);
+	background-repeat: no-repeat, repeat;
+	background-size: cover, auto;
+	background-attachment: fixed;
+	background-blend-mode: overlay;
+}
+
+#wrapper {
+	display: grid;
+	margin: auto;
+	grid-template-areas:
+		"h1 h1"
+		"header main"
+		"footer footer";
+	grid-template-columns: 1fr 2.5fr;
+	max-width: 900px;
+	gap: 20px;
+}
+
+h1,
+h2,
+h3,
+h4 {
+	font-family: blotter, var(--fonts);
+}
+
+header,
+main,
+footer {
+	border-radius: 10px;
+	background: var(--light);
+	padding: 20px;
+	border: 2px solid var(--red);
+	overflow: auto;
+	box-shadow: inset 5px 5px 5px var(--peach), inset -5px -5px 5px var(--peach);
+}
+
+h1 {
+	grid-area: h1;
+	position: sticky;
+	top: 0;
+}
+
+main {
+	grid-area: main;
+}
+
+header {
+	grid-area: header;
+}
+
+footer {
+	grid-area: footer;
+	text-align: center;
+	margin-bottom: 20px;
+	p {
+		margin: 5px;
+	}
+}
+
+blockquote {
+	border-left: 2px dotted var(--dark);
+	padding-left: 5px;
+}
+
+dt {
+	font-style: italic;
+	font-weight: bold;
+}
+
+a {
+	color: var(--dark);
+	&:hover {
+		text-decoration: line-through;
+	}
+}
+
+h1 {
+	text-align: center;
+	text-shadow: 2px 2px 1px white, 2px 2px 1px white;
+	filter: drop-shadow(2px 2px 1px rgb(255, 255, 255))
+		drop-shadow(-2px -2px 1px rgb(255, 255, 255));
+	&::before {
+		content: url(../assets/left-cat.gif);
+		padding-right: 10px;
+	}
+
+	&::after {
+		content: url(../assets/right-cat.gif);
+		padding-left: 10px;
+	}
+}
+
+details {
+	cursor: help;
+	summary::marker {
+		content: "-";
+	}
+	&[open] summary::marker {
+		content: "+";
+	}
+}
+
+table {
+	tr {
+		&:first-of-type {
+			background: var(--green);
+			color: var(--light);
+		}
+		&.info {
+			background: var(--red);
+			color: var(--light);
+		}
+
+		&:nth-of-type(even):not(.info) {
+			background: var(--peach);
+			color: var(--green);
+		}
+
+		&:nth-of-type(odd):not(:first-of-type) {
+			background: var(--peach);
+			color: var(--red);
+		}
+	}
+}
+
+@media screen and (max-width: 500px) {
+	#wrapper {
+		display: block;
+		gap: 0;
+	}
+
+	header,
+	main,
+	footer {
+		margin: 20px 10px;
+	}
+}

@@ -1,0 +1,91 @@
+@font-face {
+	font-family: romance;
+	src: url(fonts/RomanceA.ttf);
+}
+
+body {
+	/* background-color: blue; */
+	background-image: url(assets/bg.png), url(assets/pattern.gif);
+	background-attachment: fixed;
+	background-size: cover, auto;
+	background-blend-mode: overlay;
+	font-family: var(--fonts);
+}
+
+:root {
+	--fonts: ms pgothic, monospace;
+	--brown: rgb(171, 127, 127);
+}
+
+#wrapper {
+	display: grid;
+	max-width: 800px;
+	margin: auto;
+	grid-template-areas:
+		"h1 h1"
+		"header main"
+		"footer footer";
+	grid-template-columns: 1fr 1fr;
+}
+
+header,
+main,
+footer {
+	background-color: var(--brown);
+	padding: 20px;
+	border: 1px solid black;
+}
+
+h1 {
+	grid-area: h1;
+	font-family: romance, var(--fonts);
+	position: sticky;
+	top: 0px;
+	text-align: center;
+}
+
+header {
+	grid-area: header;
+}
+
+main {
+	grid-area: main;
+}
+
+footer {
+	grid-area: footer;
+}
+
+a:hover {
+	text-decoration: line-through;
+}
+
+details {
+	&[open] summary::marker {
+		content: "+";
+		color: blueviolet;
+	}
+
+	summary::marker {
+		content: "-";
+		color: aqua;
+	}
+}
+
+table {
+	tr:first-of-type {
+		background-color: antiquewhite;
+	}
+
+	tr:nth-of-type(3n + 1) {
+		background-color: brown;
+	}
+
+	tr:nth-of-type(3n + 2) {
+		background-color: rgb(41, 47, 135);
+	}
+
+	tr:nth-of-type(3n + 3) {
+		background-color: rgb(219, 142, 132);
+	}
+}
