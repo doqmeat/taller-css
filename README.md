@@ -6,7 +6,9 @@
 2. bajar `assets` y `fonts` (con esto vamos a decorar la página)
 3. tener editor con un live preview! aquí algunas opciones:
    1. VSC extension: _live preview_
-   2. [Phoenix Code - online code editor with live preview](https://phcode.dev/)
+   2. python: `python3 -m http.server 8000`
+   3. node.js: `npx http-server -o .`
+   4. [codepen](https://codepen.io)
 
 ### extra links
 
